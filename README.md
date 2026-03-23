@@ -23,4 +23,4 @@ Trained students in web development and computer fundamentals.
 - Work focused on sustainable alternatives to traditional wood
 
 ## Live Portfolio
-👉 https://BatmanBhaiya.github.io/NirmalDhyani
+👉 https://NirmalDhyani.github.io/NirmalDhyani
