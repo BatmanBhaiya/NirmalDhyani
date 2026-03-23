@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nirmal Dhyani</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nirmal Dhyani</title>
 
-  <!-- Bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    body { background: #f8f9fa; }
-    .hero { padding: 60px 0; text-align: center; }
-    .card { border: none; border-radius: 15px; }
-  </style>
+<style>
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+h1 { font-weight: 700; }
+
+a { color: #38bdf8; text-decoration: none; }
+
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="container hero">
-  <h1 class="fw-bold">Nirmal Dhyani</h1>
-  <p class="lead">Sustainable Materials Researcher | MDF & Bamboo Boards | Ex-FRI</p>
-  <p>HTML • CSS • Bootstrap • PHP • SPSS</p>
-</div>
-
 <div class="container">
 
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Nirmal Dhyani</h1>
+    <p class="lead">Sustainable Materials Researcher</p>
+    <p>MDF • Bamboo Boards • Ex-FRI • HTML • CSS • Bootstrap • PHP • SPSS</p>
+  </div>
+
   <!-- ABOUT -->
-  <div class="card p-4 mb-4 shadow-sm">
+  <div class="glass">
     <h3>About Me</h3>
     <p>
-      Process-driven professional with 4+ years of experience in government-funded research projects 
-      focused on sustainable materials. Skilled in data analysis, documentation, and quality monitoring. 
-      Experienced across technical, administrative, and training roles.
+      4+ years of experience in government-funded research at FRI, Dehradun. 
+      Focused on sustainable materials, bamboo composites, and MDF. 
+      Worked on multiple research publications and real-world applications.
     </p>
   </div>
 
   <!-- EXPERIENCE -->
-  <div class="card p-4 mb-4 shadow-sm">
+  <div class="glass">
     <h3>Experience</h3>
-    <ul>
-      <li><strong>Project Assistant – Forest Research Institute (2020–2025)</strong><br>
-        Worked on bamboo & wood-based materials, testing, data analysis, and research documentation.
-      </li>
-      <br>
-      <li><strong>Web Developer Trainer – PMKVY (2019–2020)</strong><br>
-        Trained students in HTML, CSS, Bootstrap, PHP, and computer fundamentals.
-      </li>
-    </ul>
+    <p><strong>Forest Research Institute (2020–2025)</strong><br>
+    Research on bamboo & wood composites, testing, and analysis.</p>
+
+    <p><strong>Web Developer Trainer – PMKVY</strong><br>
+    Trained students in HTML, CSS, Bootstrap, PHP.</p>
   </div>
 
   <!-- PUBLICATIONS -->
-  <div class="card p-4 mb-4 shadow-sm">
-    <h3>Research Publications</h3>
+  <div class="glass">
+    <h3>Research Work</h3>
     <ul id="pubList"></ul>
   </div>
 
-  <!-- SKILLS -->
-  <div class="card p-4 mb-4 shadow-sm">
-    <h3>Skills</h3>
-    <p>SPSS • Data Analysis • Research • MDF • Bamboo Materials • HTML • CSS • Bootstrap • PHP</p>
-  </div>
-
   <!-- CONTACT -->
-  <div class="card p-4 mb-4 shadow-sm">
+  <div class="glass text-center">
     <h3>Contact</h3>
-    <p>Email: Nirmaldhyani1@gmail.com</p>
-    <p>
-      LinkedIn: 
-      <a href="https://www.linkedin.com/in/nirmaldhyani" target="_blank">
-        linkedin.com/in/nirmaldhyani
-      </a>
-    </p>
+    <p>Nirmaldhyani1@gmail.com</p>
+    <a href="https://www.linkedin.com/in/nirmaldhyani" target="_blank">LinkedIn Profile</a>
   </div>
 
 </div>
 
-<!-- JS for dynamic content -->
 <script>
-  const publications = [
-    "Bambusa nutans scrimbers with PF adhesive (2025)",
-    "Dendrocalamus membranaceus structural study (2024)",
-    "Bambusa tulda scrimbers (2024)",
-    "Poplar particle boards using RF curing (2024)",
-    "Dendrocalamus somdevai boards (2023)",
-    "Bambusa balcooa scrimbers (2026 - in publication)"
-  ];
+const publications = [
+  "Bambusa nutans scrimbers (2025)",
+  "Dendrocalamus membranaceus study (2024)",
+  "Bambusa tulda research (2024)",
+  "Poplar particle boards RF curing (2024)",
+  "Dendrocalamus somdevai boards (2023)",
+  "Bambusa balcooa (2026 - upcoming)"
+];
 
-  const pubList = document.getElementById("pubList");
+let list = document.getElementById("pubList");
 
-  publications.forEach(pub => {
-    let li = document.createElement("li");
-    li.textContent = pub;
-    pubList.appendChild(li);
-  });
+publications.forEach(p => {
+  let li = document.createElement("li");
+  li.textContent = p;
+  list.appendChild(li);
+});
 </script>
 
 </body>
