@@ -9,27 +9,57 @@
 
 <style>
 body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
+  background: #0f172a;
+  color: #e2e8f0;
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* HERO */
 .hero {
-  text-align: center;
-  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 20px;
 }
 
-.glass {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+/* CARDS */
+.section {
+  background: #1e293b;
   padding: 25px;
-  margin-bottom: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
 }
 
-h1 { font-weight: 700; }
+/* HOVER EFFECT */
+.container:hover .section {
+  opacity: 0.3;
+  transform: scale(0.98);
+}
 
-a { color: #38bdf8; text-decoration: none; }
+.container .section:hover {
+  opacity: 1 !important;
+  transform: scale(1.03);
+  background: #334155;
+}
+
+/* LINKS */
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
 
 </style>
 </head>
@@ -40,55 +70,53 @@ a { color: #38bdf8; text-decoration: none; }
 
   <!-- HERO -->
   <div class="hero">
-    <h1>Nirmal Dhyani</h1>
-    <p class="lead">Sustainable Materials Researcher</p>
-    <p>MDF • Bamboo Boards • Ex-FRI • HTML • CSS • Bootstrap • PHP • SPSS</p>
+    <img src="IMG_9763 gf.jpg" alt="profile">
+    <div>
+      <h1>Nirmal Dhyani</h1>
+      <p>Sustainable Materials Researcher</p>
+      <p>MDF • Bamboo • Ex-FRI • HTML • CSS • Bootstrap • PHP • SPSS</p>
+    </div>
   </div>
 
   <!-- ABOUT -->
-  <div class="glass">
+  <div class="section">
     <h3>About Me</h3>
-    <p>
-      4+ years of experience in government-funded research at FRI, Dehradun. 
-      Focused on sustainable materials, bamboo composites, and MDF. 
-      Worked on multiple research publications and real-world applications.
-    </p>
+    <p>4+ years of experience in sustainable materials research at FRI, focusing on bamboo composites and MDF with multiple publications.</p>
   </div>
 
   <!-- EXPERIENCE -->
-  <div class="glass">
+  <div class="section">
     <h3>Experience</h3>
     <p><strong>Forest Research Institute (2020–2025)</strong><br>
-    Research on bamboo & wood composites, testing, and analysis.</p>
+    Research on bamboo & wood composites.</p>
 
     <p><strong>Web Developer Trainer – PMKVY</strong><br>
-    Trained students in HTML, CSS, Bootstrap, PHP.</p>
+    Taught HTML, CSS, Bootstrap, PHP.</p>
   </div>
 
   <!-- PUBLICATIONS -->
-  <div class="glass">
+  <div class="section">
     <h3>Research Work</h3>
     <ul id="pubList"></ul>
   </div>
 
   <!-- CONTACT -->
-  <div class="glass text-center">
+  <div class="section text-center">
     <h3>Contact</h3>
     <p>Nirmaldhyani1@gmail.com</p>
-    <a href="https://www.linkedin.com/in/nirmaldhyani" target="_blank">LinkedIn Profile</a>
+    <a href="https://www.linkedin.com/in/nirmaldhyani" target="_blank">LinkedIn</a>
   </div>
 
 </div>
 
 <script>
 const publications = [
-  "Dhyani, N., Khali, D. P., & Rawat, R. S. (2025). Physical and mechanical properties of bamboo reconstituted destructured boards/scrimbers prepared from Bambusa nutans Wall. ex Munro using phenol formaldehyde (PF) adhesive. 
-  Advances in Bamboo Science, 100136",
-  "Dhyani, N., Khali, D., & Rawat, R. (2024). Bamboo scrimbers prepared from Dendrocalamus membranaceus: A study on its suitability for structural applications. Indian Forester, 150(3), 284–291.",
-  "Dhyani, N., Khali, D., & Rawat, R. (2024). Reconstituted bamboo scrimbers prepared from Bambusa tulda with Phenol Formaldehyde (PF) adhesive for structural applications. International Journal for Research in Applied Science & Engineering Technology, 12(8), 359–367",
-  "Khali, D. P., Bhandari, A., & Dhyani, N. (2024). Manufacturing of Poplar (Populus deltoides) particle boards using radio frequency curing of Urea Formaldehyde adhesive. International Journal for Research in Applied Science and Engineering Technology, 12(11), 803–813.",
-  "Khali, D. P., Dhyani, N., & Bhandari, A. (2023). Bamboo reconstituted destructured boards prepared from Dendrocalamus somdevai for structural purposes as a substitute to wood. Journal of the Indian Academy of Wood Science, 20(2), 165–172.",
-  "Dhyani, N., Khali, D., & Rawat, R. (2026). Physical and mechanical properties of Bambusa balcooa scrimbers bonded with phenol-formaldehyde for sustainable construction. Journal of Bamboo and Rattan (in publication)."
+  "Bambusa nutans scrimbers (2025)",
+  "Dendrocalamus membranaceus study (2024)",
+  "Bambusa tulda research (2024)",
+  "Poplar particle boards RF curing (2024)",
+  "Dendrocalamus somdevai boards (2023)",
+  "Bambusa balcooa (2026 upcoming)"
 ];
 
 let list = document.getElementById("pubList");
